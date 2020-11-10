@@ -1,17 +1,19 @@
 #
 # Examen POO2
 #
+require_relative 'text_providers'
 require_relative 'link_displayers'
 
 parse_method = ARGV[1] || 'simple'
 source = ARGV[0]
-
-text = if source.start_with?('http://')
-  require 'net/http'
-  Net::HTTP.get(URI(source))
+source_method = if source.start_with?('http://')
+  :url
 else
-  File.read(source)
+  :file
 end
+#EXAM: source using a parametric factory DP
+text_provider = TextProvider.create source_method
+text = text_provider.text source
 
 if parse_method == 'simple'
   links = []
@@ -32,7 +34,8 @@ else
   exit
 end
 
-links_displayer = LinkListDisplayer.new
+#EXAM: display using the chain of responsability DP
+LinkListDisplayer.new
   .add(LinkDisplayers::Longest.new "longest link: ")
   .add(LinkDisplayers::CountBeginningWithHttp.new "link count starting with http:// ")
   .display(links)
