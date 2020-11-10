@@ -1,6 +1,7 @@
 #
 # Examen POO2
 #
+require_relative 'link_displayers'
 
 parse_method = ARGV[1] || 'simple'
 source = ARGV[0]
@@ -31,8 +32,7 @@ else
   exit
 end
 
-longest = links.sort_by {|link| link.size}.last
-puts "longest link: #{longest}"
-
-starts_with_http = links.select {|link| link.start_with? 'http://'}.size
-puts "link count starting with http:// #{starts_with_http}"
+links_displayer = LinkListDisplayer.new
+  .add(LinkDisplayers::Longest.new "longest link: ")
+  .add(LinkDisplayers::CountBeginningWithHttp.new "link count starting with http:// ")
+  .display(links)
