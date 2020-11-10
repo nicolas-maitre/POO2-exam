@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Accueil - Intranet CPNV</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="N4qyb2MEuobwQYBNQZaW8tFmMeMeT4isxeIRvO1tlGU="/>
+  <link href="/stylesheets/minimal.css?1585006571" media="all" rel="stylesheet" type="text/css" />
+  <!--[if lte IE 8]>
+    <link href="/stylesheets/minimal_ie.css?1585006571" media="all" rel="stylesheet" type="text/css" />
+  <![endif]-->
+	
+	
+  <link href="/stylesheets/cache_base.css?1585006640" media="all" rel="stylesheet" type="text/css" />
+	<script src="/javascripts/cache_base.js?1585006571" type="text/javascript"></script>
+	
+  
+  <style type="text/css">
+    ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+    li.bjqs-slide{position:absolute; display:none;}
+    #banner_fade {height: 510px;}
+  </style>
+  <script src="/javascripts/bjqs-1.3.js?1585006571" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+     $('#banner_fade').bjqs({
+          animtype        : 'fade',
+          height          : 508,
+          width           : 1998,
+          responsive      : true,
+          randomstart     : false,
+          animduration    : 300,
+          animspeed       : 3000,
+          showcontrols    : false,
+          centercontrols  : false,
+          showmarkers     : false,
+          centermarkers   : false,
+          usecaptions     : false
+      });
+    });
+  </script>
+
+  
+</head>
+<body>
+<div id="intranet_wrapper">
+
+  <div id="intranet_header">
+    <div class="intranet-inner">
+      <div id="intranet_logo">
+        <a href="/"><span>Intranet CPNV</span></a>
+      </div>
+
+			<div id="intranet_topforms">
+				<form accept-encoding="UTF-8" action="/preferences" id="intranet_topforms_context" method="post"><div style="margin:0;padding:0;display:inline"><input name="_utf8" type="hidden" value="&#9731;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="N4qyb2MEuobwQYBNQZaW8tFmMeMeT4isxeIRvO1tlGU=" /></div>
+  				  <label for="person_intranet_prefs_current_sections">Contexte</label>
+  				  <select id="person_intranet_prefs_current_sections" name="person[intranet_prefs_current_sections]" onchange="this.form.submit();"><option value="cpnv" selected="selected">CPNV</option><optgroup label="Sites"><option value="cr">César-Roux</option>
+<option value="payerne">CPNV Payerne</option>
+<option value="sainte-croix">CPNV Sainte-Croix</option>
+<option value="yverdon">CPNV Yverdon</option>
+<option value="morges">Morges</option>
+<option value="saint-loup">Saint-Loup</option></optgroup><optgroup label="Ecoles"><option value="em">EM</option>
+<option value="emsc">EMSC</option>
+<option value="emy">EMY</option>
+<option value="epai">EPAI</option>
+<option value="epc">EPC</option>
+<option value="epcb">EPCB</option>
+<option value="epcy">EPCY</option>
+<option value="epsy">EPSY</option>
+<option value="essc">ESSC</option>
+<option value="esy">ESY</option>
+<option value="log-cr">LOG-César-Roux</option></optgroup><optgroup label="Filières"><option value="auto">Filière Automatique</option>
+<option value="bois">Filière Bois</option>
+<option value="sante">Filière de la Santé</option>
+<option value="technique">Filière de la Technique</option>
+<option value="vente">Filière de la Vente</option>
+<option value="commerce">Filière du Commerce</option>
+<option value="social">Filière du Social</option>
+<option value="elon">Filière Electronique</option>
+<option value="info">Filière Info</option>
+<option value="logistique">Filière Logistique</option>
+<option value="matu">Filière Matu Pro</option>
+<option value="meca">Filière Méca</option>
+<option value="media">Filière Média</option></optgroup></select>
+  				</form>
+				
+				
+				<form accept-encoding="UTF-8" action="/rechercher" id="intranet_topforms_search" method="get"><div style="margin:0;padding:0;display:inline"><input name="_utf8" type="hidden" value="&#9731;" /></div>
+					<input id="q" name="q" type="text" />
+					<button class=" submit" id="search_submit" type="submit" value="Rechercher"><span>Rechercher</span></button>
+				</form>
+			</div>
+			
+			<div id="intranet_user">
+				
+  	      
+  	      
+  				<a href="/connexion">Connexion</a>
+  				
+  			
+      </div>
+
+			<!-- Should really be: render_cell :menu, :top_menu -->
+			<ul id="intranet_topmenu">
+				<li><a href="/calendriers" id="intranet_topmenu_calendars">Calendriers</a></li>
+				<li><a href="/pages" id="intranet_topmenu_information">Informations</a></li>
+				<li><a href="/documents" id="intranet_topmenu_documents">Documents</a></li>
+				<li><a href="/listes" id="intranet_topmenu_lists">Listes</a></li>
+				<li><a href="/applications" id="intranet_topmenu_applications">Applications</a></li>
+				<li><a href="/wiki" id="intranet_topmenu_wiki">Wiki</a></li>
+			</ul>
+			
+      
+
+    </div>
+  </div>
+  
+  
+  
+  <div id="intranet_breadcrumb">
+      <!--[if lte IE 8]>
+        <div class="intranet-inner" style="padding: 0.5em 14px 0;">
+          <div style="padding: 0.5em 1em; background-color: #ffcccc; border: #ff0000 solid 2px; font-weight: bold; text-align: center;">
+            ATTENTION: Votre navigateur est obsolète, un certain nombre de fonctionnalités de l'Intranet ne seront pas opérationnelles
+          </div>
+        </div>
+      <![endif]-->
+    <div class="intranet-inner">
+      
+      
+    </div>
+  </div>
+  
+  <div id="intranet_flipleft">
+		<a href="/screen_width/wide" data-method="post" id="intranet_wide"><span>Condensé</span></a>
+		<a href="/screen_width/fluid" data-method="post" id="intranet_fluid"><span>Fluide</span></a>
+  </div>
+
+  
+  <div id="intranet_flipright">
+		
+  </div>
+
+  <div id="intranet_middle"><div class="intranet-inner">
+    
+    
+    
+		
+		<div id="intranet_content" class="content-without-sidemenu content-without-sidebar">
+		  
+		  
+		  
+
+<div id="credits">
+  <div id="banner_fade" style="display:block;">
+
+    <ul class="bjqs">
+      <li><img alt="1" src="/images/homepage/1.jpg?1585006570" /></li>
+      <li><img alt="2" src="/images/homepage/2.jpg?1585006570" /></li>
+      <li><img alt="3" src="/images/homepage/3.jpg?1585006570" /></li>
+      <li><img alt="4" src="/images/homepage/4.jpg?1585006570" /></li>
+      <li><img alt="5" src="/images/homepage/5.jpg?1585006570" /></li>
+      <li><img alt="6" src="/images/homepage/6.jpg?1585006570" /></li>
+    </ul>
+
+  </div>
+</div>
+
+		</div>
+  </div></div>
+  
+  <script type="text/javascript">
+    $('#sidemenu_button').click(function(event) {
+      $('#intranet_content').toggleClass('content-with-sidemenu content-without-sidemenu');
+      $('#sidemenu').toggle();
+      $('#sidemenu_button span').toggle();
+      return false;
+    });
+  </script>
+
+  <div id="intranet_footer">
+    <div class="intranet-inner">
+    	Propulsé par des <a href="/credits">logiciels libres</a> <span class="dimmed">&bull;</span>
+    	Contactez le <a href="mailto:intranet@cpnv.ch">webmaster</a> 
+    	
+    	  <span class="dimmed">&bull;</span> 31 utilisateurs connectés
+    	
+      <!--[if lte IE 8]>
+   	    	<span class="dimmed">&bull;</span> Le rendu sera meilleur avec un <a href="http://openweb.eu.org/articles/navigateurs_alternatifs/">navigateur respectant les normes</a>
+      <![endif]-->
+  	</div>
+	</div>
+
+</div>
+</body>
+</html>
