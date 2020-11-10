@@ -1,5 +1,5 @@
 #
-# Examen POO2
+# Examen POO2, Nicolas Maitre
 #
 require_relative 'text_providers'
 require_relative 'html_links_parsers'
@@ -12,12 +12,17 @@ source_method = if source.start_with?('http://')
 else
   :file
 end
-#EXAM: source using a parametric factory DP
+#EXAM: source using the parametric factory DP
 text_provider = TextProvider.create source_method
 text = text_provider.text source
 
-#EXAM: parsing using a parametric factory DP
-link_parser = HTMLLinksParser.create(parse_method)
+#EXAM: parsing using the parametric factory DP
+begin
+  link_parser = HTMLLinksParser.create(parse_method)
+rescue => exception
+  puts exception
+  exit
+end
 links = link_parser.parse text
 
 #EXAM: display using the chain of responsability DP

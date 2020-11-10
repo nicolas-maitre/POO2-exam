@@ -6,9 +6,7 @@ class HTMLLinksParser
         when 'regexp'
             WithRegexp
         else
-            # raise "#{method} method is not supported"
-            puts "Unknown parse method"
-            exit
+            raise "Unknown parse method"
         end).new
     end
     def initialize
